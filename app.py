@@ -619,20 +619,20 @@ info_box(
     "area yang terindikasi tumor."
 )
 
-with st.expander("⚙️ Catatan Konfigurasi Model"):
-    st.markdown("""
-    - Letakkan bobot model hasil training (`.pt`) pada folder `models/`, atau atur
-      `download_url` pada `MODEL_CONFIG` agar otomatis diunduh saat pertama kali dijalankan.
-    - Nama kelas **tidak perlu ditulis manual** — diambil otomatis dari `model.names` sesuai
-      label yang digunakan saat training YOLOv8 (misalnya `Benign`, `Malignant`, dsb).
-    - Sesuaikan `Confidence Threshold` dan `IoU Threshold` pada sidebar sesuai karakteristik
-      model Anda.
-    - Model ini menggunakan layer custom **TripletAttention**. Definisinya sudah disertakan
-      langsung di bagian atas file ini dan didaftarkan ke `ultralytics.nn.tasks` sebelum model
-      di-load, sehingga checkpoint `.pt` hasil training Anda bisa di-unpickle dengan benar.
-      Jika arsitektur custom Anda berbeda dari yang ada di sini, salin ulang definisi
-      class-nya persis seperti saat training agar bobot tetap cocok.
-    """)
+# with st.expander("⚙️ Catatan Konfigurasi Model"):
+#     st.markdown("""
+#     - Letakkan bobot model hasil training (`.pt`) pada folder `models/`, atau atur
+#       `download_url` pada `MODEL_CONFIG` agar otomatis diunduh saat pertama kali dijalankan.
+#     - Nama kelas **tidak perlu ditulis manual** — diambil otomatis dari `model.names` sesuai
+#       label yang digunakan saat training YOLOv8 (misalnya `Benign`, `Malignant`, dsb).
+#     - Sesuaikan `Confidence Threshold` dan `IoU Threshold` pada sidebar sesuai karakteristik
+#       model Anda.
+#     - Model ini menggunakan layer custom **TripletAttention**. Definisinya sudah disertakan
+#       langsung di bagian atas file ini dan didaftarkan ke `ultralytics.nn.tasks` sebelum model
+#       di-load, sehingga checkpoint `.pt` hasil training Anda bisa di-unpickle dengan benar.
+#       Jika arsitektur custom Anda berbeda dari yang ada di sini, salin ulang definisi
+#       class-nya persis seperti saat training agar bobot tetap cocok.
+#     """)
 
 uploaded_file = st.file_uploader(
     "Seret & lepas gambar di sini, atau klik untuk memilih",
