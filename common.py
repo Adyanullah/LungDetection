@@ -708,17 +708,6 @@ def sidebar_nav(extra_controls=None):
             unsafe_allow_html=True,
         )
 
-        st.markdown('<div class="sidebar-section-title">Navigasi</div>', unsafe_allow_html=True)
-
-        # PENTING: sesuaikan path di bawah ini dengan nama file asli pada folder
-        # project Anda (path bersifat relatif terhadap file entry point utama).
-        # Jika halaman tidak tampil / error, cek kembali nama filenya.
-        try:
-            st.page_link("Tentang_Model.py", label="Tentang Model")
-            st.page_link("pages/1_Simulasi_Deteksi.py", label="Simulasi Deteksi")
-        except Exception:
-            st.caption("Sesuaikan path pada st.page_link() dengan struktur file Anda.")
-
         if extra_controls is not None:
             extra_controls()
 
