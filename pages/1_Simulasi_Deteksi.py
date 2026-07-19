@@ -91,7 +91,7 @@ except ImportError:
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="PulmoVision | Deteksi Tumor Paru",
+    page_title="LungDetection | Deteksi Tumor Paru",
     page_icon=":material/pulmonology:",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -308,7 +308,7 @@ if uploaded_file is not None:
 divider()
 st.markdown("""
 <div style="text-align:center;padding:1.5rem;color:var(--text-light);font-size:0.85rem;">
-    PulmoVision &middot; YOLOv8 Lung Tumor Detection<br>
+    LungDetection &middot; YOLOv8 Lung Tumor Detection<br>
     Dibangun dengan Streamlit &amp; Ultralytics YOLOv8
 </div>
 """, unsafe_allow_html=True)

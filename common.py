@@ -1,6 +1,6 @@
 """
 common.py
-Modul bersama untuk aplikasi PulmoVision (multi-page Streamlit app).
+Modul bersama untuk aplikasi LungDetection (multi-page Streamlit app).
 Berisi: tema CSS "Clinical Tech", komponen UI (card, info-box, metric-card, dsb),
 logo/icon (SVG, bukan emoji), dan navigasi sidebar yang dipakai di semua halaman.
 """
@@ -702,7 +702,7 @@ def sidebar_nav(extra_controls=None):
             f"""
             <div class="sidebar-logo-wrap">
                 <div class="sidebar-logo-mark">{icon('logo')}</div>
-                <div class="sidebar-logo-title">PulmoVision</div>
+                <div class="sidebar-logo-title">LungDetection</div>
             </div>
             """,
             unsafe_allow_html=True,
@@ -713,6 +713,6 @@ def sidebar_nav(extra_controls=None):
 
         st.markdown("""
         <div class="sidebar-footer">
-            <p>PulmoVision<br>YOLOv8 + Triplet Attention<br>Deteksi &amp; Klasifikasi Tumor Paru</p>
+            <p>LungDetection<br>YOLOv8 + Triplet Attention<br>Deteksi &amp; Klasifikasi Tumor Paru</p>
         </div>
         """, unsafe_allow_html=True)

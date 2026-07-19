@@ -15,7 +15,7 @@ from common import (
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="PulmoVision | Tentang Model",
+    page_title="LungDetection | Tentang Model",
     page_icon=":material/pulmonology:",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -30,7 +30,7 @@ sidebar_nav()
 page_header(
     "Dokumentasi Model",
     "Tentang Model & Proses Training",
-    "Ringkasan singkat arsitektur, dataset, dan konfigurasi training di balik PulmoVision."
+    "Ringkasan singkat arsitektur, dataset, dan konfigurasi training di balik LungDetection."
 )
 
 info_box(
@@ -199,7 +199,7 @@ divider()
 
 st.markdown("""
 <div style="text-align:center;padding:1.5rem;color:var(--text-light);font-size:0.85rem;">
-    PulmoVision &middot; YOLOv8 + Triplet Attention &mdash; Lung Tumor Detection<br>
+    LungDetection &middot; YOLOv8 + Triplet Attention &mdash; Lung Tumor Detection<br>
     Dataset: LIDC-IDRI
 </div>
 """, unsafe_allow_html=True)
