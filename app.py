@@ -35,7 +35,7 @@ page_header(
 
 info_box(
     "Halaman ini menjelaskan secara ringkas bagaimana model deteksi pada aplikasi ini "
-    "dilatih &mdash; mulai dari library yang digunakan, arsitektur, sumber data, hingga strategi "
+    "dilatih, mulai dari library yang digunakan, arsitektur, sumber data, hingga strategi "
     "augmentasi. Untuk mencoba modelnya secara langsung, buka halaman <b>Simulasi Deteksi</b> "
     "pada menu sebelah kiri."
 )
@@ -102,7 +102,7 @@ card(
     "tambahan modul <b>Triplet Attention</b> (Rotate to Attend, WACV 2021). Modul ini "
     "menangkap interaksi cross-dimension antara channel dan spasial (tinggi &amp; lebar) "
     "melalui tiga cabang perhatian yang saling melengkapi, tanpa menambah parameter yang "
-    "signifikan &mdash; bertujuan mempertajam fokus model pada area nodul yang sering berukuran "
+    "signifikan ke model. Ini bertujuan mempertajam fokus model pada area nodul yang sering berukuran "
     "kecil pada citra CT paru."
 )
 
