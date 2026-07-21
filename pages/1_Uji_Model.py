@@ -83,6 +83,20 @@ try:
     # checkpoint/arsitektur YAML yang memuat layer TripletAttention
     ultralytics_tasks.TripletAttention = TripletAttention
 
+    # PENTING: saat checkpoint disimpan sewaktu training, class TripletAttention
+    # (dan turunannya) kemungkinan tercatat di pickle sebagai milik module
+    # '__main__' (karena script training dijalankan langsung sebagai __main__).
+    # Di aplikasi multi-page Streamlit ini, halaman yang sedang berjalan BUKAN
+    # module __main__, jadi unpickler gagal dengan error semacam:
+    #   "module '__main__' has no attribute 'TripletAttention'"
+    # Untuk mengatasinya, daftarkan juga class-class ini langsung ke
+    # sys.modules['__main__'] agar tetap ditemukan di manapun class ini
+    # sebenarnya didefinisikan.
+    import __main__ as _main_module
+    _main_module.ZPool = ZPool
+    _main_module.AttentionGate = AttentionGate
+    _main_module.TripletAttention = TripletAttention
+
     ULTRALYTICS_OK = True
 except ImportError:
     ULTRALYTICS_OK = False
@@ -91,7 +105,7 @@ except ImportError:
 # PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="LungDetection | Deteksi Tumor Paru",
+    page_title="PulmoVision | Deteksi Tumor Paru",
     page_icon=":material/pulmonology:",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -308,7 +322,7 @@ if uploaded_file is not None:
 divider()
 st.markdown("""
 <div style="text-align:center;padding:1.5rem;color:var(--text-light);font-size:0.85rem;">
-    LungDetection &middot; YOLOv8 Lung Tumor Detection<br>
+    PulmoVision &middot; YOLOv8 Lung Tumor Detection<br>
     Dibangun dengan Streamlit &amp; Ultralytics YOLOv8
 </div>
 """, unsafe_allow_html=True)
