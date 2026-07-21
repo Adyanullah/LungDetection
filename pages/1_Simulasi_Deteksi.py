@@ -178,7 +178,7 @@ sidebar_nav(extra_controls=_detection_controls)
 # KONTEN HALAMAN — SIMULASI / INFERENSI
 # ─────────────────────────────────────────────
 page_header(
-    "Simulasi Deteksi",
+    "Uji Model",
     "Deteksi Tumor Paru",
     "Unggah gambar CT-Scan / X-Ray paru untuk menguji model YOLOv8 secara langsung."
 )

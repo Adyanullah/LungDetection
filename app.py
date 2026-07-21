@@ -36,7 +36,7 @@ page_header(
 info_box(
     "Halaman ini menjelaskan secara ringkas bagaimana model deteksi pada aplikasi ini "
     "dilatih, mulai dari library yang digunakan, arsitektur, sumber data, hingga strategi "
-    "augmentasi. Untuk mencoba modelnya secara langsung, buka halaman <b>Simulasi Deteksi</b> "
+    "augmentasi. Untuk mencoba modelnya secara langsung, buka halaman <b>Uji Model</b> "
     "pada menu sebelah kiri."
 )
 

@@ -713,6 +713,6 @@ def sidebar_nav(extra_controls=None):
 
         st.markdown("""
         <div class="sidebar-footer">
-            <p>LungDetection<br>YOLOv8 + Triplet Attention<br>Deteksi &amp; Klasifikasi Tumor Paru</p>
+            <p>LungDetection<br>YOLOv8 + Triplet Attention<br>Deteksi &amp; Klasifikasi Tumor Paru<br>Oleh :<br>Adyan Bhagaskara<br>220411100114</p>
         </div>
         """, unsafe_allow_html=True)
